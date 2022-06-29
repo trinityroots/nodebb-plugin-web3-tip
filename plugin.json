@@ -1,26 +1,19 @@
 {
-	"id": "nodebb-plugin-sso-google",
-	"name": "NodeBB Google SSO",
-	"description": "NodeBB Plugin that allows users to login/register via their Google account.",
-	"url": "https://github.com/julianlam/nodebb-plugin-sso-google",
+	"id": "nodebb-plugin-web3-tips",
+	"name": "Web3 Tips",
+	"description": "",
+	"url": "https://github.com/julianlam/nodebb-plugin-support-forum",
 	"library": "./library.js",
-	"templates": "templates",
 	"hooks": [
+		{ "hook": "filter:config.get", "method": "appendConfig" },
 		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:config.get", "method": "exposeSettings" },
-		{ "hook": "filter:auth.list", "method": "getAssociation" },
-		{ "hook": "filter:auth.init", "method": "getStrategy" },
-		{ "hook": "filter:admin.header.build", "method": "addMenuItem" },
-		{ "hook": "static:user.delete", "method": "deleteUserData" },
-		{ "hook": "filter:user.whitelistFields", "method": "appendUserHashWhitelist" }
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
 	],
-	"modules": {
-		"../admin/plugins/sso-google.js": "static/lib/admin.js"
-	},
+	"templates": "static/templates",
 	"scripts": [
 		"static/lib/main.js"
 	],
-	"staticDirs": {
-		"images": "static/images"
+	"modules": {
+		"../admin/plugins/web3-tips.js": "./static/lib/admin.js"
 	}
 }

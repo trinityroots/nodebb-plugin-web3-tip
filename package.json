@@ -1,19 +1,17 @@
 {
-  "name": "nodebb-plugin-sso-google",
-  "version": "2.5.7",
-  "description": "NodeBB Google SSO",
+  "name": "nodebb-plugin-web3-tip",
+  "version": "3.0.2",
+  "description": "",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-google"
+    "url": "https://github.com/julianlam/nodebb-plugin-support-forum"
   },
   "keywords": [
     "nodebb",
     "plugin",
-    "google",
-    "sso",
-    "single sign on",
-    "registration"
+    "support",
+    "privacy"
   ],
   "author": {
     "name": "Julian Lam",
@@ -21,14 +19,16 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-google/issues"
+    "url": "https://github.com/julianlam/nodebb-plugin-support-forum/issues"
   },
-  "readme": "",
   "readmeFilename": "README.md",
-  "dependencies": {
-    "passport-google-oauth20": "^1.0.0"
-  },
   "nbbpm": {
-    "compatibility": "^1.17.0"
+    "compatibility": "^2.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "8.x",
+    "eslint-config-nodebb": "0.1.1",
+    "eslint-plugin-import": "2.x"
   }
 }
